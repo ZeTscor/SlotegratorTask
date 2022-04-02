@@ -29,7 +29,7 @@ public class BaseSteps {
 
     @AfterAll
     void close() {
-            driver.close();
-        }
+        driver.close();
     }
+}
 

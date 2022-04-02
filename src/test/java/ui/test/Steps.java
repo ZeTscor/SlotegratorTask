@@ -53,12 +53,14 @@ public class Steps extends BaseSteps {
         playersPage.loadPage();
         driver.quit();
     }
+
     @And("Click sort button 'UserName'")
-    public void clickUserNameButton(){
+    public void clickUserNameButton() {
         playersPage.clickSortButton();
     }
+
     @Then("Table sorted")
-    public void sortedTable(){
+    public void sortedTable() {
         playersPage.sortTableByUserName();
         driver.quit();
     }

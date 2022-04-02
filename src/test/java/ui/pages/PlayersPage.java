@@ -35,11 +35,11 @@ public class PlayersPage extends BasePage {
     }
 
     public PlayersPage sortTableByUserName() {
-        List<WebElement> notSortedList= driver.findElements(userNameCell);
+        List<WebElement> notSortedList = driver.findElements(userNameCell);
         driver.findElement(userNameColumn).click();
         waitElementIsNotVisible(driver.findElement(By.xpath("//div[contains(@class, 'grid-view-load')]")));
         List<WebElement> sortedList = driver.findElements(userNameCell);
-        Assertions.assertNotEquals(notSortedList,sortedList);
+        Assertions.assertNotEquals(notSortedList, sortedList);
         return this;
 
 
