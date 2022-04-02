@@ -5,9 +5,10 @@ import api.helpers.data.RegPlayerData;
 import com.github.javafaker.shaded.snakeyaml.external.biz.base64Coder.Base64Coder;
 
 
-public class PlayerRequestGen{
-      RegPlayerData faker = new RegPlayerData();
-    public  PlayerRequest getNewPlayer(){
+public class PlayerRequestGen {
+    RegPlayerData faker = new RegPlayerData();
+
+    public PlayerRequest getNewPlayer() {
         PlayerRequest newPlayer = PlayerRequest.builder()
                 .username(faker.getUsername())
                 .passwordChange(Base64Coder.encodeString(faker.getPassword()))
